@@ -1,5 +1,5 @@
 type userObjectShape = {
   name: string;
-  userID: number; 
-}
-export default userObjectShape
+  userID: number;
+};
+export default userObjectShape;
