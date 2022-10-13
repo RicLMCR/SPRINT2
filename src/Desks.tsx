@@ -20,31 +20,31 @@ function Desks(props: any) {
   };
 
   //   Search for desks via input box val
-  const searchDesks = (input: string) => {
-    console.log(`My input is ${input}`);
-    for (let i = 0; i < desks.length; i++) {
-      console.log("looking for entries");
-      if (desks[i].deskName == input) {
-        console.log("found!");
-      }
-    }
-  };
+  //   const searchDesks = (input: string) => {
+  //     console.log(`My input is ${input}`);
+  //     for (let i = 0; i < desks.length; i++) {
+  //       console.log("looking for entries");
+  //       if (desks[i].deskName == input) {
+  //         console.log("found!");
+  //       }
+  //     }
+  //   };
 
-  useEffect(() => {
-    searchDesks(searchName);
-  }, [searchName]);
+  //   useEffect(() => {
+  //     searchDesks(searchName);
+  //   }, [searchName]);
 
   // NOTE: Change to form with onSubmit handler to pass input box searches
   return (
     <div className="deskContainer">
-      <h3>Search Desk</h3>
+      {/* <h3>Search Desk</h3>
       <form>
         <input
           className="deskInput"
           type="text"
           onChange={(e) => setSearchName(e.target.value)}
         />
-      </form>
+      </form> */}
 
       <h3>Select Desk</h3>
 
