@@ -5,9 +5,9 @@ import UserID from "./userID";
 function Desks(props: any) {
   // List of desks
   const [desks, setDesks] = useState<{ deskName: string; deskID: number }[]>([
-    { deskName: "desk 1", deskID: 1 },
-    { deskName: "desk 2", deskID: 2 },
-    { deskName: "desk 3", deskID: 3 },
+    { deskName: "Desk 1", deskID: 1 },
+    { deskName: "Desk 2", deskID: 2 },
+    { deskName: "Desk 3", deskID: 3 },
   ]);
 
   // Load calendar function
@@ -17,12 +17,13 @@ function Desks(props: any) {
   };
 
   return (
-    <div>
-      <h2>Select Desk</h2>
+    <div className="deskContainer">
+      <h3>Select Desk</h3>
 
       {desks.map((desk) => (
-        <div className="deskContainer" key={desk.deskID}>
+        <div key={desk.deskID}>
           <button
+            className="deskButton"
             type="button"
             onClick={() => {
               loadCal(desk.deskName);
@@ -37,8 +38,3 @@ function Desks(props: any) {
 }
 
 export default Desks;
-
-// setBooking((bookingArray) => [
-//   ...bookingArray,
-//   { userID: "bob", deskName: "Desk 4", deskID: 4 },
-// ]);
