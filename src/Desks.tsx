@@ -18,6 +18,9 @@ function Desks(props: any) {
 
   return (
     <div className="deskContainer">
+      <h3>Search Desk</h3>
+      <input className="deskInput" type="text" />
+
       <h3>Select Desk</h3>
 
       {desks.map((desk) => (
