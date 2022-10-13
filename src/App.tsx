@@ -32,8 +32,8 @@ function App(): JSX.Element {
       <UserID {...userIDProps} />
       <div className="deskAndCalContainer">
         <Desks {...deskProps} />
-        <CalendarComponent setDate={setDate}/>
-      {/* <BookingCheck date ={date}/> */}
+        <CalendarComponent setDate={setDate} />
+        {/* <BookingCheck date ={date}/> */}
         <div className="calContainer"></div>
       </div>
       <h1>User is: {userIDApp}</h1>
