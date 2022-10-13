@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, useEffect, useState, SetStateAction } from "react";
 import "./App.css";
-import Desks from "./Desks";
-import UserID from "./userID";
+import CalendarComponent from "./components/CalendarComponent";
+import BookingCheck from "./components/BookingCheck";
+import Desks from "./components/Desks";
+import UserID from "./components/userID";
 
-function App() {
+function App(): JSX.Element {
   const [desksApp, setDesksApp] = useState();
   const deskProps = {
     setDesksApp: setDesksApp,
@@ -14,17 +16,24 @@ function App() {
     setUserIDApp: setUserIDApp,
   };
 
+  const [date, setDate]: [Date, Dispatch<SetStateAction<Date>>] = useState(
+    new Date()
+  );
+
   // update desksApp on button click
   useEffect(() => {
     console.log(desksApp);
     console.log(userIDApp);
-  }, [desksApp, userIDApp]);
+    console.log(date);
+  }, [desksApp, userIDApp, date]);
 
   return (
     <div className="appContainer">
       <UserID {...userIDProps} />
       <div className="deskAndCalContainer">
         <Desks {...deskProps} />
+        <CalendarComponent setDate={setDate}/>
+      {/* <BookingCheck date ={date}/> */}
         <div className="calContainer"></div>
       </div>
       <h1>User is: {userIDApp}</h1>

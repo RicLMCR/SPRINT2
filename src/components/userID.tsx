@@ -19,8 +19,8 @@ const UserID = (props: any) => {
   //event type React.ChangeEventHandler<HTMLInputElement> but doesnt actually work
   const handleChange = (event: any) => {
     setUser(event.target.value);
-    setUserInfo(userObject[event.target.value]['userID']);
-    props.setUserIDApp(userObject[event.target.value]['userID']);
+    setUserInfo(userObject[event.target.value]["userID"]);
+    props.setUserIDApp(userObject[event.target.value]["userID"]);
   };
 
   return (
