@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React, { useEffect, useState } from "react";
 import "./App.css";
+import Desks from "./Desks";
 
 function App() {
-  // const [deskList, setDeskList] = useState <any>([
-  //   { id: "1", name: "desk1", user: "", booked: false },
-  //   { id: "2",name: "desk2", user: "", booked: false },
-  //   { id: "3", name: "desk3", user: "", booked: false },
-  // ]);
+  const [desksApp, setDesksApp] = useState();
+  const deskProps = {
+    setDesksApp: setDesksApp,
+  };
 
-const [myArr, setMyArr]=useState([])
-
-  
-
+  // update desksApp on button click
+  useEffect(() => {
+    console.log(desksApp);
+  }, [desksApp]);
 
   return (
-<div>
-
-</div>
+    <div className="appContainer">
+      <Desks {...deskProps} />
+      <h1>{desksApp}</h1>
+    </div>
   );
 }
 
