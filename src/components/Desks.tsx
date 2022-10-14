@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import UserID from "./userID";
+// import UserID from "../userID";
 
 function Desks(props: any) {
   // List of desks

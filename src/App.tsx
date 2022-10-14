@@ -3,7 +3,7 @@ import "./App.css";
 import CalendarComponent from "./components/CalendarComponent";
 import BookingCheck from "./components/BookingCheck";
 import Desks from "./components/Desks";
-import UserID from "./components/userID";
+import UserID from "./userID";
 
 function App(): JSX.Element {
   const [desksApp, setDesksApp] = useState();
