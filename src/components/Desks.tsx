@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
-import UserID from "./userID";
+
+// import UserID from "../userID";
 
 function Desks(props: any) {
   // List of desks
@@ -66,6 +66,28 @@ function Desks(props: any) {
 }
 
 export default Desks;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const desks = [
 //     {deskname: "lll", deskid: 123}

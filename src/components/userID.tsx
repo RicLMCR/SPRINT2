@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import userObjectShape from "./UserObjectShape";
 
 const UserID = (props: any) => {
+
+  
   const userObject: userObjectShape[] = [
     { name: "user1", userID: 1 },
     { name: "user2", userID: 2 },
@@ -19,8 +21,8 @@ const UserID = (props: any) => {
   //event type React.ChangeEventHandler<HTMLInputElement> but doesnt actually work
   const handleChange = (event: any) => {
     setUser(event.target.value);
-    setUserInfo(userObject[event.target.value]['userID']);
-    props.setUserIDApp(userObject[event.target.value]['userID']);
+    setUserInfo(userObject[event.target.value]["userID"]);
+    props.setUserIDApp(userObject[event.target.value]["userID"]);
   };
 
   return (
