@@ -3,13 +3,18 @@ import "./App.css";
 import CalendarComponent from "./components/CalendarComponent";
 import BookingCheck from "./components/BookingCheck";
 import Desks from "./components/Desks";
-import UserID from "./userID";
+import UserID from "./components/userID";
+import UserList from "./components/userList";
 
 function App(): JSX.Element {
   const [desksApp, setDesksApp] = useState();
   const deskProps = {
     setDesksApp: setDesksApp,
   };
+
+  // stores user id
+  const [storeUser, setStoreUser] = useState();
+console.log("the store user state is", storeUser);
 
   const [userIDApp, setUserIDApp] = useState();
   const userIDProps = {
@@ -20,6 +25,17 @@ function App(): JSX.Element {
     new Date()
   );
 
+  const grabVars = () => {
+    console.log(
+      "Desk is:",
+      desksApp,
+      "User Id is:",
+      userIDApp,
+      "Date is:",
+      date
+    );
+  };
+
   // update desksApp on button click
   useEffect(() => {
     console.log(desksApp);
@@ -29,7 +45,8 @@ function App(): JSX.Element {
 
   return (
     <div className="appContainer">
-      <UserID {...userIDProps} />
+      <UserList />
+      {/* <UserID {...userIDProps} /> */}
       <div className="deskAndCalContainer">
         <Desks {...deskProps} />
         <CalendarComponent setDate={setDate} />
@@ -38,6 +55,7 @@ function App(): JSX.Element {
       </div>
       <h1>User is: {userIDApp}</h1>
       <h1>Desk is: {desksApp}</h1>
+      <button onClick={grabVars}>Submit</button>
     </div>
   );
 }
